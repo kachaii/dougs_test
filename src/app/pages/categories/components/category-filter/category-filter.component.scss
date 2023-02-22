@@ -1,0 +1,43 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/mixins";
+
+.filter-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: white;
+  padding: 6px;
+  border: 0px;
+  margin-right:5px;
+  @include selected-button-font;
+
+  .icon {
+    margin-right: 6px;
+  }
+
+  span {
+    width: 115px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    color: $light;
+  }
+}
+
+svg {
+  margin-right: 5px;
+}
+
+.selected {
+  background: $light-blue;
+  border-radius: 4px;
+
+  svg path {
+    fill: $primary-blue;
+  }
+
+  >i,
+  span {
+    color: $primary-blue;
+  }
+}

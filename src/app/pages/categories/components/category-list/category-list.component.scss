@@ -1,0 +1,65 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/mixins";
+
+ul {
+
+  &.filtered-by-category,
+  &.filtered-by-order {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+
+    .group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .active {
+        box-sizing: border-box;
+        cursor: pointer;
+        @include selected-card;
+
+      }
+
+      >.item {
+        border-bottom: 1px solid $grey-line;
+
+        &:nth-child(odd) {
+          border-right: 1px solid $grey-line;
+        }
+
+        &:last-child {
+          border-bottom: 0px;
+        }
+
+        &.last {
+          border-bottom: 0px;
+        }
+      }
+    }
+
+    .badge {
+      display: flex;
+      align-items: center;
+      border-radius: 0px;
+      padding: 2px 16px;
+
+      .name {
+        @include badge-font;
+      }
+    }
+  }
+
+  &.filtered-by-order {
+    .group {
+      border-top: 1px solid $grey-line;
+
+      .item {
+        border: none;
+      }
+
+      .item-alpha-order {
+        border-bottom: 1px solid $grey-line;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.m-blue {
+  @include blue-badge;
+}
+
+.m-pink {
+  @include pink-badge;
+}
+
+.m-red {
+  @include red-badge;
+}
+
+.m-yellow {
+  @include yellow-badge;
+}
+
+.m-green {
+  @include yellow-badge;
+}
+
+.m-purple {
+  @include purple-badge;
+}
+.m-default{
+  @include default-badge;
+}

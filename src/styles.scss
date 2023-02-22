@@ -1,0 +1,15 @@
+@import "~bootstrap/scss/bootstrap";
+@import "assets/scss/colors";
+@import "assets/scss/mixins";
+@import "assets/scss/theming";
+
+// Declare font faces
+@font-face {
+  font-family: 'Eina03-SemiBold';
+  src: url('assets/helpers/fonts/Eina03-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('assets/helpers/fonts/OpenSans-Regular.ttf');
+}

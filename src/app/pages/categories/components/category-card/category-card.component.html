@@ -1,0 +1,7 @@
+<div class="category-card" [ngClass]="{'special-category-card': category.wording ===specialCategory }">
+  <div *ngIf="hasCategoryGroup && sortAlphabetically" class="badge-card {{ categoryGroupColor }}">
+    <span class="label">{{ categoryGroupName }}</span>
+  </div>
+  <span class="title">{{ category?.wording }}</span>
+  <p class="description">{{ category?.description }}</p>
+</div>

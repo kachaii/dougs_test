@@ -1,0 +1,28 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #DCE4ED;
+  outline: none;
+  border-radius: 4px;
+  height: 35px;
+  width: 100%;
+  padding: 0 8px;
+  &__icon {
+    height: 16px;
+    width: 16px;
+    fill: #001A25;
+  }
+  &__input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    line-height: 16px;
+    color: #001A25;
+    background: transparent;
+
+  }
+
+}

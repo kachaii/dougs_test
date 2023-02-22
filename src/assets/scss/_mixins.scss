@@ -1,0 +1,95 @@
+@mixin selected-card {
+  border: 1px solid $primary-blue !important;
+  background-color: $light-blue;
+}
+
+@mixin special-card {
+  border-bottom: 1px solid $grey-line;
+  background-color: $primary-grey;
+}
+
+@mixin blue-badge {
+  color: $primary-blue;
+  background-color: $light-blue;
+}
+
+@mixin pink-badge {
+  color: $primary-pink;
+  background-color: $light-pink;
+
+}
+
+@mixin red-badge {
+  color: $primary-red;
+  background-color: $light-red;
+}
+
+@mixin yellow-badge {
+  color: $primary-yellow;
+  background-color: $light-yellow;
+
+}
+
+@mixin green-badge {
+  color: $primary-green;
+  background-color: $light-green;
+}
+
+@mixin purple-badge {
+  color: $primary-purple;
+  background-color: $light-purple;
+}
+
+@mixin default-badge {
+  color: $primary-default;
+  background-color: $lighter;
+}
+
+@mixin selected-button-font {
+  font-family: Open Sans, Arial, serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 120%;
+}
+
+@mixin title-font {
+  font-family: Eina03-SemiBold, serif;
+  font-size: 22px;
+  line-height: 120%;
+  margin-bottom: 0px;;
+  color: $primary-dark;
+}
+
+@mixin paragraph-font {
+  font-family: Open Sans, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: $primary-default;
+}
+
+@mixin card-title-font {
+  font-family: Eina03-SemiBold, serif;
+  font-size: 14px;
+  line-height: 16.8px;
+  color: $primary-dark;
+}
+
+@mixin badge-font {
+  font-family: Open Sans, Arial, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin submit-button-font {
+  font-family: Open Sans, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 120%;
+  background-color: $primary-blue;
+}

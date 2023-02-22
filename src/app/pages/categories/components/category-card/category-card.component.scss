@@ -1,0 +1,34 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/mixins";
+
+.special-category-card {
+  @include special-card;
+}
+
+.category-card {
+  padding: 15px 15px;
+  height: 100%;
+  min-height: 70px;
+
+  .badge-card {
+    width: max-content;
+    padding: 2px 12px;
+    border-radius: 16px;
+    margin-bottom: 5px;
+
+    .label {
+      @include badge-font;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .title {
+    @include card-title-font;
+  }
+
+  .description {
+    @include paragraph-font;
+    margin-bottom: 0px;
+  }
+}

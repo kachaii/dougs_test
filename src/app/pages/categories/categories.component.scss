@@ -1,0 +1,78 @@
+@import "src/assets/scss/colors";
+@import "src/assets/scss/mixins";
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $grey;
+
+  .category-header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 17px 0 17px 120px;
+    background: white;
+
+    .category-title {
+     @include title-font;
+    }
+
+    .category-filters {
+      display: flex;
+      margin-left: 30px;
+    }
+  }
+
+  .category-main {
+    margin: 20px 122px;
+    background: white;
+    border: 1px solid $grey-line;
+    border-radius: 4px;
+
+    .category-search {
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-input {
+        width: 100%;
+      }
+
+      &-dropdown {
+        margin-left: 16px;
+      }
+    }
+
+    .category-list {
+      margin-top: 10px;
+    }
+  }
+
+}
+
+.category-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 17px 120px;
+  background: white;
+
+  &-button {
+    margin-left: 16px;
+    padding: 9px;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    @include submit-button-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:disabled {
+      color: $light;
+      background-color: $grey;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<ul class="{{ isAlphabeticalSort ? 'filtered-by-order' : 'filtered-by-category' }}">
+  <ng-container *ngFor="let group of categoryGroups; trackBy: trackByGroup">
+    <div *ngIf="!isAlphabeticalSort && group.id" class="badge {{ group.color ?? 'm-default' }}">
+      <span class="name">{{ group.name }}</span>
+    </div>
+    <div [hidden]="!group.id" class="group">
+      <ng-container
+        *ngFor="let category of getCategoriesForGroup(group); trackBy: trackByCategory; let index = index; let count = count">
+        <li class="item" [appSelectedCategory]="selectedCategory?.id === category.id && isAlphabeticalSort === false"
+          [isAlphaOrder]="isAlphabeticalSort" [index]="index + 1" [count]="count"
+          (click)="onCategorySelected(category)">
+          <app-category-card [category]="category" [sortAlphabetically]="isAlphabeticalSort"></app-category-card>
+        </li>
+      </ng-container>
+    </div>
+  </ng-container>
+</ul>
