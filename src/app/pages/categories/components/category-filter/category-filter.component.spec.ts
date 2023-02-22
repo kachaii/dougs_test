@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ButtonFilterComponent } from './category-filter.component';
+import { CategoryFilterComponent } from './category-filter.component';
 
-describe('ButtonFilterComponent', () => {
-    let component: ButtonFilterComponent;
-    let fixture: ComponentFixture<ButtonFilterComponent>;
+describe('CategoryFilterComponent', () => {
+    let component: CategoryFilterComponent;
+    let fixture: ComponentFixture<CategoryFilterComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            declarations: [ButtonFilterComponent],
+            declarations: [CategoryFilterComponent],
         })
             .compileComponents();
     });
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(ButtonFilterComponent);
+        fixture = TestBed.createComponent(CategoryFilterComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

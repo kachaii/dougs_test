@@ -1,8 +1,8 @@
-import { AppSelectedCategoryDirective } from './selected-category.directive';
+import { SelectedCategoryDirective } from './selected-category.directive';
 
-describe('AppSelectedCategoryDirective', () => {
+describe('SelectedCategoryDirective', () => {
     it('should create an instance', () => {
-        const directive = new AppSelectedCategoryDirective();
+        const directive = new SelectedCategoryDirective();
         expect(directive).toBeTruthy();
     });
 });

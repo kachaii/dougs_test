@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { ALL_CATEGORIES } from 'src/assets/constantes';
+import { ALL_CATEGORIES } from '../../../assets/constantes';
 import { CategoryService } from './services/categories.service';
 import { FilterSortType } from './models/filterSortType';
 import { GroupCategory } from './models/group-category';
@@ -46,16 +46,15 @@ export class CategoriesComponent implements OnInit, OnDestroy {
 
     filterCategoryByType(filter: FilterSortType): void {
         this.filterSortType = filter;
-        this.filters.forEach((item) => {
-            item.isSelected = item.type === filter;
-        });
+        this.filters = this.filters.map((item) => ({
+            ...item,
+            isSelected: item.type === filter,
+        }));
         this.categoryService.emitFilterBySortType(filter);
     }
 
     setGroupCategoryFilter(groupCategoryId: number, groupCategoryName: string) {
         this.selectedOption = groupCategoryName;
-        console.log(this.selectedOption);
-        console.log(groupCategoryId);
         this.categoryService.emitGroupCategoryFilter(groupCategoryId);
     }
 
@@ -71,8 +70,8 @@ export class CategoriesComponent implements OnInit, OnDestroy {
             }, [ALL_CATEGORIES]);
     }
 
-    endOfDemonstration() {
-        alert(`Vous avez sélectionné la catégorie suivante : ${this.selectedCategory?.wording}`);
+    showCategorySelected() {
+        alert(this.selectedCategory?.wording);
     }
 
     ngOnDestroy() {

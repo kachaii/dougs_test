@@ -13,8 +13,6 @@ export class CategoryCardComponent {
 
     specialCategory = 'Construction ou acquisition de bâtiment';
 
-    constructor() { }
-
     public get hasCategoryGroup(): boolean {
         return !!this.category?.group;
     }

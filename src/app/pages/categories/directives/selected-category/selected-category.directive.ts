@@ -29,7 +29,5 @@ export class SelectedCategoryDirective {
     get selectedCategoriesClass() {
         return this.appSelectedCategory;
     }
-
-    constructor() { }
 }
 

@@ -32,13 +32,13 @@ export class CategoryService {
         this.searchCategory$,
     ]).pipe(
         takeUntil(this.destroy$),
-        map(([allCategories, visibleCategories, FilterSortType, groupCategoryFilter, searchCategory]) => {
+        map(([allCategories, visibleCategories, filterSortType, groupCategoryFilter, searchCategory]) => {
             let filteredCategories = allCategories
                 .filter((category) => visibleCategories.some((visibleCategory) => visibleCategory.id === category.id))
                 .filter((category) => groupCategoryFilter === undefined || category.group?.id === groupCategoryFilter)
                 .filter((category) => !searchCategory || category.wording.toLowerCase().includes(searchCategory.toLowerCase()));
 
-            filteredCategories = CategoryService.sortCategories(filteredCategories, FilterSortType);
+            filteredCategories = CategoryService.sortCategories(filteredCategories, filterSortType);
 
             return filteredCategories;
         }),
@@ -52,8 +52,8 @@ export class CategoryService {
         this.searchCategory$.next(searchString);
     }
 
-    emitFilterBySortType(FilterSortType: FilterSortType): void {
-        this.filterBySortType$.next(FilterSortType);
+    emitFilterBySortType(filterSortType: FilterSortType): void {
+        this.filterBySortType$.next(filterSortType);
     }
 
     emitGroupCategoryFilter(groupCategoryId: number | undefined): void {
